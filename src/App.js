@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import UserList from './components/UserList';
-import Pagination from './components/Pagination';
+// import Pagination from './components/Pagination';
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -17,13 +17,13 @@ const App = () => {
       <h1 className="text-3xl font-bold text-center mb-5">GitHub User Search</h1>
       <SearchBar setUsers={setUsers} setTotalCount={setTotalCount} currentPage={currentPage} />
       <UserList users={users} />
-      {totalCount > 0 && (
+      {/* {totalCount > 0 && (
         <Pagination
           totalCount={totalCount}
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />
-      )}
+      )} */}
     </div>
   );
 };
